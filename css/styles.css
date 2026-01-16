@@ -379,13 +379,17 @@ Team section
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 48px;
+    column-gap: 24px;
 }
 
 .portfolio-card {
-    width: 360px;
+    width: calc((100% - 48px) / 3);
     background-color: #ffffff;
     border: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-title {
@@ -408,15 +412,6 @@ Team section
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
-}
-
-.portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 48px;
-    column-gap: 24px;
 }
 
 .portfolio-cover-wrap {
@@ -442,11 +437,6 @@ Team section
 
 .portfolio-card:hover .portfolio-cover-text {
     transform: translateY(0);
-}
-
-.portfolio-card {
-    width: calc((100% - 48px) / 3);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card:hover {
