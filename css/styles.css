@@ -876,3 +876,23 @@ Team section
 .modal-submit-btn:focus {
     background-color: #404bbf;
 }
+/* CHECKBOX */
+
+.modal-check-box {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-check-icon {
+    fill: #fff;
+    opacity: 0;
+}
+
+.modal-check-input:checked+.modal-check-label .modal-check-icon {
+    opacity: 1;
+}
