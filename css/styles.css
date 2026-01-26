@@ -181,9 +181,10 @@ Hero section
     padding: 188px 0;
     background-color: #2e2f42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
-    width: 1440px;
+    max-width: 1440px;
     height: 600px;
     margin: auto;
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -460,7 +461,15 @@ Team section
 .footer-container {
     display: flex;
     align-items: baseline;
-    gap: 80px;
+    gap: 120px;
+}
+
+.footer-wrapper-logo {
+    margin-right: 120px;
+}
+
+.footer-subscribe {
+    margin-left: auto;
 }
 
 
@@ -468,6 +477,13 @@ Team section
 .footer-logo-header-logo {
     color: #4d5ae5;
     font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-logo-span {
@@ -556,6 +572,11 @@ Team section
     color: #ffffff;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscribe-input:focus {
+    border-color: #31d0aa;
 }
 
 .footer-subscribe-input::placeholder {
@@ -588,7 +609,7 @@ Team section
 
 .footer-subscribe-btn:hover,
 .footer-subscribe-btn:focus {
-    background-color: #404bbf;
+    background-color: #31d0aa;
 }
 
 .footer-subscribe-icon {
@@ -664,20 +685,14 @@ Team section
     padding: 0;
     cursor: pointer;
 
-    font-size: 18px;
-    line-height: 1;
-    color: #2e2f42;
-
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
     background-color: #404bbf;
     border-color: #404bbf;
-    color: #ffffff;
 }
 
 .modal-close-icon {
@@ -688,11 +703,6 @@ Team section
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
     fill: #ffffff;
-}
-.modal-close-btn img {
-    display: block;
-    width: 24px;
-    height: 24px;
 }
 
 .modal-title {
@@ -730,19 +740,6 @@ Team section
 
 .modal-input-wrap {
     position: relative;
-}
-
-
-.modal-icon-img {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 18px;
-    height: 18px;
-
-    pointer-events: none;
 }
 
 .modal-input {
@@ -797,6 +794,7 @@ Team section
     color: rgba(46, 47, 66, 0.4);
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 16px;
 }
 
 .modal-textarea:focus {
